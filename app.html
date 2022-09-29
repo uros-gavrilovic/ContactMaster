@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <title>ContactMaster</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="img/smallIcon.ico">
+  </head>
+  <body style="background-color: rgb(254,220,50);">
+    
+    <nav class="header">
+      <div><img src="img/icon.png" class="headerLogo1">
+        <img src="img/icon2.png" class="headerLogo2">
+      </div>
+      <ul class="headerList center" id="navBar" style="padding-left: 0; justify-self: center; list-style: none;">
+        <li><a href="index.html" class="hyperLinkOff">POČETNA STRANICA</a></li>
+        <li><a href="app.html" class="hyperLinkOff activeHeaderItem">APLIKACIJA</a></li>
+        <li><a id="about" class=" hyperLinkOff">O NAMA</a></li>
+      </ul>
+      <div class="burger" id="burgerId">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="bodyDiv">
+      <div class="bodyDivLeft">
+        <div id="bodyDivLeftMessageID" class="bodyDivLeftMessage" style="display: none;">
+          <h2>Molimo Vas da se prijavite na profil kako<br> biste pristupili aplikaciji.</h2>
+          <img src="img/loading.gif" style="width: 70%; height: 70%;" class="center">
+          <button id="authorize_button" style="display: none;" class="buttonStyle center"><img src="img/login.png">PRIJAVI SE</button>
+          
+        </div>
+        <select size="3" id="listID" class="listStyle center" style="border: solid 4px rgb(64,64,64);"></select>
+        <button id="signout_button" style="display: none; margin-top: 3vh; vertical-align: middle;" class="buttonStyle center"><img src="img/logout.png">ODJAVI SE</button>
+        </div>
+
+      <div id="bodyDivRightID" class="bodyDivRight blur">        
+        <h2>Upravljanje postojećim kontaktima</h2><br>
+        <form id ="mainFormID">
+          <label for="nameID">Ime kontakta: </label>
+          <input type="text" id="nameID" maxlength="400" readonly><br>
+          <label for="phoneNumberID">Broj telefona: </label>
+          <input type="number" id="phoneNumberID" maxlength="15" readonly><BR>
+          <button type="button" id="btnDeleteSubmitID" class="formButtonStyle" style="margin-bottom: 7px;" onSubmit="return deleteContact(event);">IZBRIŠI KONTAKT</button>
+          <button type="button" id="btnModifyID" class="formButtonStyle">IZMENI KONTAKT</button><br><br>
+        </form>
+
+        <form id="modifyFormID" class="modifyFormHidden" style="margin-bottom: 20px;">
+          <label for="modifyNameID">Izmenjeno ime kontakta: </label>
+          <input type="text" id="modifyNameID" maxlength="40" required><br>
+          <label for="modifyPhoneNumberID">Izmenjeni broj telefona: </label>
+          <input type="number" id="modifyPhoneNumberID" maxlength="15" required><br>
+          <button type="button" id="btnModifySubmitID" class="formButtonStyle" style="width: 300px;" onSubmit="return modifyContact(event);">UNESI IZMENJEN KONTAKT</button>
+        </form>
+
+        <h2>Dodavanje novog kontakta</h2><br>
+        <form id="createFormID">
+          <label for="createNameID">Novi kontakt: </label>
+          <input type="text" id="createNameID" maxlength="40" required><br>
+          <label for="createPhoneNumberID">Broj telefona: </label>
+          <input type="number" id="createPhoneNumberID" maxlength="15" required><BR>
+          <button type="button" id="btnCreateSubmitID" class="formButtonStyle" style="width: 300px;" onSubmit="return createContact(event);">KREIRAJ NOVI KONTAKT</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer footerDark" id="footer">
+      <div class="footerLeft">
+        <img src="img/icon2.png" id="footerLogo">
+        <p>All rights reserved 2022<br>
+          Design by Uroš Gavrilović</p>
+      </div>
+      <div class="footerCenter">
+        <div>
+          <p style="font-weight: bold;"><u>ContactMaster</u></p><br>
+          <ul>
+            <li><a href="index.html" class="hyperLinkOff"">Početna stranica</a></li>
+            <li><a href="app.html" class="hyperLinkOff">Aplikacija</a></li>
+            <li><a href="#footer" class="hyperLinkOff">O nama</a></li>
+          </ul>
+        </div>
+        <div class="image-wrapper">
+          <img src="img/up3.png" id="upBtnId" class="upBtn">
+        </div>
+      </div>
+      <div class="footerRight">
+        <p style="font-weight: bold;">Posetite nas i na društvenim mrežama!</p>
+        <div class="center">
+          <a href="https://www.facebook.com/" target="_blank"><img src="img/fb.png" alt="fb.png"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="img/ig.png" alt="ig.png"></a>
+          <a href="https://www.linkedin.com/" target="_blank"><img src="img/linkedin.png" alt="linkedin.png"></a>
+        </div>
+      </div>
+    </div>    
+
+    <script src="js/navBar.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>

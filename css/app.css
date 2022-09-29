@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    color: rgb(64,64,64);
+}
+input{
+    margin-bottom: 10px;
+    width: 50%;
+    height: 40px;
+    font-size: large;
+    background-color: transparent;
+    border: solid black 5px;
+    border-radius: 15px;
+}
+
+.image{
+    position: absolute;
+    bottom: 0;
+}
+.listStyle{
+    
+    width: 40vw; 
+    height: 55vh;
+    font-size: large;
+    display: none;
+}
+.listStyle option:checked {
+    background-color: rgb(64,64,64);
+    color: white;
+  }
+.listStyle option:hover{
+    background-color: rgb(64,64,64);
+    color: white;
+}
+.buttonStyle{
+    background-color: rgb(64,64,64);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+.buttonStyle img{
+    width: 40px;
+    height: 40px;
+}
+.formButtonStyle{
+    font-size: large;
+    background-color: rgb(64,64,64);
+    color: white;
+    font-weight: bold;
+    border: 3px solid rgb(64,64,64);
+    border-radius: 10px;
+    width: 300px;
+    height: 35px;
+}
+.bodyDiv{
+    padding-top: 10vh;
+    margin-bottom: 10vh;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.bodyDivLeft{
+    margin-left: 40px;
+    margin-right: 50px;
+    border-right: solid rgb(64,64,64) 5px;
+}
+.modifyFormHidden{
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.modifyFormVisible{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
+.blur{
+    filter: blur(3.5px);
+    z-index: -1;
+}
+
+.disable{
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+button{
+    cursor: pointer;
+}
+.footerCenter a{
+    color: white;
+}
+/* sakriva input type number strelice */
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fade-in-anim {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+.indexFont{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: tomato;
+}
+
+@media screen and (max-width:850px){
+    .bodyDiv{
+        margin-top: 15vh;
+        grid-template-columns: 1fr;
+    }
+    .bodyDivLeft{
+        border-right: 0;
+        margin-bottom: 10vh;
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    .bodyDivRight{
+        margin-left: 5vw;
+    }
+    .listStyle{
+        width: 90vw;
+        font-size: x-large;
+    }
+
+}

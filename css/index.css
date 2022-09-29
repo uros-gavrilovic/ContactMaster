@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url("../img/background.png");
+    background-color: rgb(254,220,50);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+a{
+    color: rgb(64,64,64);
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.image{
+    position: absolute;
+    bottom: 0;
+}
+.bodyText{
+    margin-top: 30px;
+    margin-right: 50px;
+    font-size: x-large;
+    font-weight: bold;
+}
+.text{
+    list-style: revert;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+.text li{
+    margin-left: 40px;
+}
+
+.mobileView{
+    display: none;
+}
+
+.learnMoreBtn{
+    cursor: pointer;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    border-radius: 20px;
+    color: rgb(254,220,50);
+    padding: 10px;
+    border: 5px solid rgb(64,64,64);
+    background-color: rgb(64,64,64);
+}
+.learnMoreBtn:hover{
+    color: rgb(64,64,64);
+    background-color: rgb(254,220,50);
+}
+.learnMoreBtn a{
+    color: rgb(254,220,50);
+}
+.learnMoreBtn:hover a{
+    color: rgb(64,64,64);
+}
+
+.learnMorePt1{
+    top: -100%;
+    color: white;
+    background-color: rgb(64,64,64);
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 120px;
+    border-radius: 30px;
+}
+.learnMorePt2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10vh;
+}
+.gridItem{
+    justify-content: center;
+    align-items: center;
+}
+.standardView .learnMorePt2{
+    background-color: rgb(64,64,64);
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 0;
+}
+
+@media screen and (max-width:820px){
+    .footer{
+        color: white;
+        background-color: rgb(64,64,64);
+    }
+    .mobileView{
+        margin-top: 15vh;
+        display: block;
+    }
+    .learnMorePt2 img{
+        width: 90vw;
+    }
+    .standardView{
+        display: none;
+    }
+    body{
+        background-image: none;
+        background-color: yellow;
+        background-image: url('/img/solidBackground.png');
+        z-index: -1;
+    }
+    .image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    .text{
+        color: rgb(64,64,64);
+    }
+    .learnMorePt2{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
